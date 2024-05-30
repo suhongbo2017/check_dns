@@ -25,6 +25,6 @@ while True:
     # print(log_filename)
     with open(f'./{log_filename}','a',encoding='utf-8')as log:
         log.write(str(check_time) + ' - ')
-        log.write(message + '\n')
-        
+        log.write(message + '\n')    
     time.sleep(60)
+
