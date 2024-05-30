@@ -3,10 +3,14 @@
 import socket
 import time
 from datetime import datetime
+'''
+该代码用于检查 ip 与url是否已经反向代理解析，并生成日志保存。
+'''
+
 def check_server_dns(ip_address,url):
     try:
         hostname,a,b = socket.gethostbyaddr(ip_address)
-        # print(hostname,a,b)
+
         if hostname == url:
             return True ,f'解析地址为:{hostname},ip是:{b}'
         else:
